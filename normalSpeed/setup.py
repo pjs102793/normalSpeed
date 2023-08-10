@@ -54,6 +54,7 @@ class CMakeBuild(build_ext):
             build_args += ["--", "/m"]
         else:
             cmake_args += ["-DCMAKE_BUILD_TYPE=" + cfg]
+            cmake_args += ['-DCMAKE_CXX_FLAGS=-fopenmp']
             build_args += ["--", "-j2"]
 
         env = os.environ.copy()
@@ -72,7 +73,7 @@ class CMakeBuild(build_ext):
 
 setup(
     name="normalSpeed",
-    version="0.0.1",
+    version="0.0.2",
     author="liujianran",
     long_description="",
     ext_modules=[CMakeExtension("normalSpeed")],

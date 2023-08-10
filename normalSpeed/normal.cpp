@@ -1,4 +1,5 @@
 #include"normal.hpp"
+#include <omp.h>
 
 using namespace std;
 using namespace cv;
@@ -65,7 +66,7 @@ Mat depthNormals(const Mat &src,
   const int l_offset6 = 0 + l_r * l_W;
   const int l_offset7 = +l_r + l_r * l_W;
 
-
+  #pragma omp parallel for
   for (int l_y = l_r; l_y < l_H - l_r - 1; ++l_y)
   {
     // lp_line point to depth map，lp_norm point to normal map
