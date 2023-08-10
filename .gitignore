@@ -1,3 +1,5 @@
 normalSpeed/build
 *.so
 normalSpeed/*.so
+dist/
+normalSpeed.egg-info/
