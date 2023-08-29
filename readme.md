@@ -2,7 +2,7 @@
 A fast algorithm for comupting the normal of the depth img. And warp it with pybind11. Modified from the code in line 702 of [PCL linemod package](http://docs.ros.org/en/hydro/api/pcl/html/surface__normal__modality_8h_source.html#702) and [patch_linemod](https://github.com/meiqua/patch_linemod/tree/master/linemodLevelup).
 
 ## pre requirements:
-1. opencv3
+1. opencv4
 2. numpy
 3. [pybind11](https://github.com/pybind/pybind11):
    ```
